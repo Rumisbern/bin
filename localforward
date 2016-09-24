@@ -1,0 +1,9 @@
+#!/bin/sh
+
+printf "Host : "
+read host
+printf "port : "
+read port
+
+ssh -N -f -L localhost:${port}:localhost:${port} ${host}
+
